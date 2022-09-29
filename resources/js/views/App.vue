@@ -1,6 +1,10 @@
 <template>
 
-    <section>
+    <section class="text-center">
+        <section >
+            <h2> about us</h2>
+            <h2> home </h2>
+        </section>
         <Main :posts="posts" :tags="tags"/>
     </section>
    
