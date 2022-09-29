@@ -2,10 +2,18 @@
 
     <section class="text-center">
         <section >
-            <h2> about us</h2>
-            <h2> home </h2>
+            <div>
+
+                <router-link to="/About">about us</router-link>
+            </div>
+            <div>
+
+                <router-link to="/HomePage">home</router-link>
+            </div>
         </section>
         <Main :posts="posts" :tags="tags"/>
+
+        <router-view></router-view>
     </section>
    
 </template>

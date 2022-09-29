@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import { component } from 'vue/types/umd';
+// import { component } from 'vue/types/umd';
 
 Vue.use(VueRouter)
 
@@ -18,7 +18,7 @@ const router = new VueRouter ({
             component:AboutUs
         },
         {
-            path:'/Home',
+            path:'/HomePage',
             name:'HomePage',
             component:HomePage
         }
