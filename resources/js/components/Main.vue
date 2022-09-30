@@ -27,6 +27,13 @@ export default{
 }
 </script>
 
-<style>
-
+<style lang=scss scoped>
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+ul li{
+    list-style: none;
+}
 </style>

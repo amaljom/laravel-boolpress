@@ -1,14 +1,14 @@
 <template>
 
     <section class="text-center">
-        <section >
+        <section class="d-flex justify-content-center">
             <div>
                 
-                 <router-link to="/About">about us</router-link> 
+                 <router-link class="fz" to="/About">about us</router-link> 
             </div>
             <div>
 
-                 <router-link to="/HomePage">home</router-link> 
+                 <router-link class="fz" to="/HomePage">home</router-link> 
             </div>
         </section>
  
@@ -24,5 +24,8 @@ export default {
 </script>
 
 <style>
-
+.fz{
+    font-size: 2rem;
+    margin: 0 15px;
+}
 </style>
