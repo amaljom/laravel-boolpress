@@ -14,7 +14,9 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
+    
     data:function(){
       return{
           post:[],
@@ -24,23 +26,15 @@ export default {
 
     methods:{
         callFunction(){
-            console.log('hai cliccato')
+           axios.get('/api/posts/2',{
+           }).then((response)=>{
+               console.log(response)
+           }).catch((error)=>{
+               console.log(error)
+           })
         }
-    //   getPosts(){
-    //       axios.get('/api/posts',{
-    //       }).then((response)=>{
-    //           this.posts=response.data.result.data;
-    //       }).catch((error)=>{
-    //           console.log(error)
-    //       })
 
-    //       axios.get('/api/tags',{
-    //       }).then((response)=>{
-    //           this.tags=response.data.result.data;
-    //       }).catch((error)=>{
-    //           console.log(error)
-    //       })
-    //   }
+    
   },
 }
 </script>
