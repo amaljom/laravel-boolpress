@@ -8,6 +8,7 @@ Vue.use(VueRouter)
 
 import AboutUs from './pages/AboutUs';
 import HomePage from './pages/HomePage';
+import SinglePost from './pages/SinglePost';
 
 const router = new VueRouter ({
     mode: 'history',
@@ -21,6 +22,11 @@ const router = new VueRouter ({
             path:'/HomePage',
             name:'HomePage',
             component:HomePage
+        },
+        {
+            path:'/SinglePost',
+            name:'SinglePost',
+            component:SinglePost
         }
     ]
 })

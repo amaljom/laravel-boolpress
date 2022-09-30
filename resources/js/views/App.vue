@@ -10,6 +10,9 @@
 
                  <router-link class="fz" to="/HomePage">home</router-link> 
             </div>
+            <div>
+                 <router-link class="fz" to="/SinglePost">Single Post</router-link> 
+            </div>
         </section>
  
         <router-view></router-view> 
