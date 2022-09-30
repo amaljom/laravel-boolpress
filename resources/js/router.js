@@ -22,6 +22,6 @@ const router = new VueRouter ({
             name:'HomePage',
             component:HomePage
         }
-
     ]
 })
+export default router

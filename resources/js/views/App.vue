@@ -3,17 +3,17 @@
     <section class="text-center">
         <section >
             <div>
-
-                <router-link to="/About">about us</router-link>
+                
+                 <router-link to="/About">about us</router-link> 
             </div>
             <div>
 
-                <router-link to="/HomePage">home</router-link>
+                 <router-link to="/HomePage">home</router-link> 
             </div>
         </section>
         <Main :posts="posts" :tags="tags"/>
-
-        <router-view></router-view>
+ 
+        <router-view></router-view> 
     </section>
    
 </template>
