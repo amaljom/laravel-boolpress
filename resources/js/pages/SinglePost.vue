@@ -10,6 +10,16 @@
         <option>5</option>
     </select>
     <button @click="callFunction()" >Invia</button>
+    <!-- POST -->
+    <div v-if="vuoto" class="card w-25 mx-auto text-center">
+        <div>
+            <img  :src="Post.post_image" alt="">
+        </div>
+        <p> {{ Post.author}}</p>
+        <h2> {{ Post.title}}</h2>
+        <p> {{ Post.Post_content}}</p>
+        <p> {{ Post.Post_date}}</p>
+    </div>
   </div>
 </template>
 
@@ -19,19 +29,23 @@ export default {
     
     data:function(){
       return{
-          post:[],
-          selected:0
+          Post:[],
+          selected:0,
+          vuoto:false
       }
     },
 
     methods:{
+        
         callFunction(){
-           axios.get('/api/posts/2',{
+           axios.get('/api/posts/'+this.selected,{
            }).then((response)=>{
-               console.log(response)
+               this.Post=response.data.result.data;
+               this.vuoto=true;
            }).catch((error)=>{
                console.log(error)
            })
+
         }
 
     

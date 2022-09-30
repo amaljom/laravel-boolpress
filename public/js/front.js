@@ -1994,14 +1994,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      post: [],
-      selected: 0
+      Post: [],
+      selected: 0,
+      vuoto: false
     };
   },
   methods: {
     callFunction: function callFunction() {
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/posts/2', {}).then(function (response) {
-        console.log(response);
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/posts/' + this.selected, {}).then(function (response) {
+        _this.Post = response.data.result.data;
+        _this.vuoto = true;
       })["catch"](function (error) {
         console.log(error);
       });
@@ -2158,7 +2162,14 @@ var render = function render() {
         return _vm.callFunction();
       }
     }
-  }, [_vm._v("Invia")])]);
+  }, [_vm._v("Invia")]), _vm._v(" "), _vm.vuoto ? _c("div", {
+    staticClass: "card w-25 mx-auto text-center"
+  }, [_c("div", [_c("img", {
+    attrs: {
+      src: _vm.Post.post_image,
+      alt: ""
+    }
+  })]), _vm._v(" "), _c("p", [_vm._v(" " + _vm._s(_vm.Post.author))]), _vm._v(" "), _c("h2", [_vm._v(" " + _vm._s(_vm.Post.title))]), _vm._v(" "), _c("p", [_vm._v(" " + _vm._s(_vm.Post.Post_content))]), _vm._v(" "), _c("p", [_vm._v(" " + _vm._s(_vm.Post.Post_date))])]) : _vm._e()]);
 };
 
 var staticRenderFns = [];
